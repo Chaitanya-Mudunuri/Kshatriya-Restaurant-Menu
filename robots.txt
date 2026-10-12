@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://menu.kshatriya.mudunuri.co.in/sitemap.xml
