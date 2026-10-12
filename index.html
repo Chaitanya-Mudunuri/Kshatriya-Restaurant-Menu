@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshatriya 2 — Premium Menu</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-crown"><i class="fa-solid fa-crown"></i></div>
+            <h2 style="font-family: 'Playfair Display', serif; color: var(--gold); letter-spacing: 4px; font-size: 2rem; margin-bottom: 1rem;">KSHATRIYA <span style="font-size: 1.2rem; color: var(--crimson);">2</span></h2>
+            <div class="loader-bar-track"><div class="loader-bar-fill" id="loader-fill"></div></div>
+            <p style="font-family: 'Cormorant Garamond', serif; color: var(--muted); font-style: italic;">Preparing a royal experience...</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>Kshatriya <em>Restaurant 2</em></h1>
+            <p class="subtitle">The Legendary Chitti Muthyala Menu — Dharmavaram</p>
+        </div>
+    </header>
+    <main class="container">
+        <div class="filters" role="group" aria-label="Food type filters">
+            <button class="active" data-filter="all" onclick="filterMenu('all',this)">All</button>
+            <button data-filter="veg" onclick="filterMenu('veg',this)">Veg</button>
+            <button data-filter="nonveg" onclick="filterMenu('nonveg',this)">Non-Veg</button>
+        </div>
+
+        <section class="category-section" id="biryani">
+            <h2 class="category-heading"><span class="dot" aria-hidden="true"></span> Biryanis & Rice</h2>
+            <div class="menu-grid" data-cat="biryani">
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chitti Muthyala Chicken Dum Biryani</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Signature short-grain rice with tender chicken, dum-cooked.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Natukodi Biryani</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Country chicken biryani with aromatic spices.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Dupudu Biryani</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Rich mutton-style biryani with deep flavors.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Veg Biryani</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Fresh vegetables, fragrant rice, traditional seasoning.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Basmathi Chicken Fry Biryani</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Basmathi rice with fried chicken pieces.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chicken Mughalai Biryani</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Mughal-style chicken biryani with royal spices.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-section" id="starters">
+            <h2 class="category-heading"><span class="dot" aria-hidden="true"></span> Starters (Fried & Appetizers)</h2>
+            <div class="menu-grid" data-cat="starters">
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Mushroom 65</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Spicy crispy mushroom with 65 seasoning.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Crispy Corn</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Golden crispy corn with light spices.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Paneer Chilli</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Crispy paneer in tangy chilli sauce.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Kaju Chicken</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Tender chicken with rich cashew gravy.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Natukodi Fry</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Spicy country chicken fry.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chicken Pakodi</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Crispy chicken pakoras with onion.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Wet Wings</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Spicy juicy chicken wings.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Loose Prawns</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Fresh loose prawns fried with spices.</p>
+                    </div>
+                </article>
+
+
+
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chilli Chicken</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Classic chilli chicken — crispy and savory.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Baby Corn Manchuria</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Fried baby corn in tangy sauce.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Egg Chilli</h3><span class="tag nonveg">Both</span>
+                        </div>
+                        <p class="desc">Spicy egg chilli with onions.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Boiled Egg</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Simple boiled egg with seasoning.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-section" id="rice-noodles">
+            <h2 class="category-heading"><span class="dot" aria-hidden="true"></span> Rice & Noodles</h2>
+            <div class="menu-grid" data-cat="rice-noodles">
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Veg Fried Rice</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Stir-fried rice with vegetables.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Paneer Fried Rice</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Paneer with fried rice — veg or egg.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chicken Fried Rice</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Tender chicken with fried rice.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Mushroom Fried Rice</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Rice with mushrooms and vegetables.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Veg Special Fried Rice</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Premium vegetable fried rice.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Special Chicken Fried Rice</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Special fried rice with chicken.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Egg Fried Rice</h3><span class="tag nonveg">Both</span>
+                        </div>
+                        <p class="desc">Fried rice with egg.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Veg Noodles</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Stir-fried noodles with vegetables.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Egg Noodles</h3><span class="tag nonveg">Both</span>
+                        </div>
+                        <p class="desc">Noodles with egg.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chicken Noodles</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Noodles with tender chicken.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Paneer Kaju Fried Rice</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Fried rice with paneer and cashew.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-section" id="curries">
+            <h2 class="category-heading"><span class="dot" aria-hidden="true"></span> Curries</h2>
+            <div class="menu-grid" data-cat="curries">
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chicken Curry</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Slow-cooked chicken in rich tomato-onion gravy.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Mutton Curry</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Tender mutton in deep gravy.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Paneer Curry</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Soft paneer in creamy tomato gravy.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Kaju Paneer Curry</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Paneer and cashew in rich gravy.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Kaju Curry</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Cashew-based rich curry.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Mushroom Curry</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Fresh mushrooms in spiced gravy.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Kaju Tomato</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Cashew with tangy tomato base.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Prawns Curry</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Fresh prawns in spicy tangy gravy.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chicken Curry 1kg</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Family-size chicken curry.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chicken Boneless Curry</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Tender boneless chicken in spiced gravy.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Dupudu Curry</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Dark intense mutton curry.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-section" id="fried">
+            <h2 class="category-heading"><span class="dot" aria-hidden="true"></span> Fried & Grill</h2>
+            <div class="menu-grid" data-cat="fried">
+
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Grill Chicken</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Char-grilled chicken with house spices.</p>
+                    </div>
+                </article>
+                <!-- <article class="card" data-type="nonveg"><div class="card-body"><div class="card-header"><h3>Chilli Chicken</h3><span class="tag nonveg">Non-Veg</span></div><p class="desc">Classic chilli chicken — crispy and savory.</p></div></article> -->
+                <!-- <article class="card" data-type="veg"><div class="card-body"><div class="card-header"><h3>Baby Corn Manchuria</h3><span class="tag veg">Veg</span></div><p class="desc">Fried baby corn in tangy sauce.</p></div></article> -->
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Koju Pitta</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Spicy chicken with Andhra seasoning.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Joint / Chicken Joint</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Spicy fried chicken joint pieces.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Wings / Lollipop</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Spicy juicy chicken wings / lollipop pieces.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-section" id="dessert">
+            <h2 class="category-heading"><span class="dot" aria-hidden="true"></span> Desserts & Drinks</h2>
+            <div class="menu-grid" data-cat="dessert">
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Junnu</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Traditional South Indian milk pudding.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="veg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Curd Rice</h3><span class="tag veg">Veg</span>
+                        </div>
+                        <p class="desc">Creamy curd rice with vegetables.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>ThumbsUp / Goli Soda / Water</h3><span class="tag nonveg">Both</span>
+                        </div>
+                        <p class="desc">Beverages served chilled.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category-section" id="pickles">
+            <h2 class="category-heading"><span class="dot" aria-hidden="true"></span> Pickles</h2>
+            <div class="menu-grid" data-cat="pickles">
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Natukodi Pickle</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">1kg / 500g / 250g — country chicken pickle.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chicken Pickle</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Spicy chicken pickle.</p>
+                    </div>
+                </article>
+                <article class="card" data-type="nonveg">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Prawns Pickle</h3><span class="tag nonveg">Non-Veg</span>
+                        </div>
+                        <p class="desc">Tangy prawn pickle.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <aside class="disclaimer" aria-label="Disclaimer">
+            <h2>Important Note</h2>
+            <p>Prices are not mentioned as they are subjected to change.</p>
+            <div class="paymethods" aria-label="Payment methods">
+                <span><i class="fa-solid fa-credit-card"></i> Cards</span>
+                <span><i class="fa-solid fa-mobile-screen-button"></i> UPI</span>
+                <span><i class="fa-solid fa-money-bill-transfer"></i> Cash</span>
+                <span>All payment methods available</span>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="container">© Kshatriya Restaurant 2 · NH 16, Dharmavaram · Premium Menu</div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+</body>
+</html>
