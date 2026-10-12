@@ -12,7 +12,7 @@ function filterMenu(type, btn) {
         if (type === 'all') {
             card.style.display = '';
         } else {
-            card.style.display = (card.getAttribute('data-type') === type) ? '' : 'none';
+            card.style.display = (card.getAttribute('data-type') === type || card.getAttribute('data-type') === 'both') ? '' : 'none';
         }
     });
     document.querySelectorAll('.category-section').forEach(sec => {

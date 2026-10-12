@@ -189,6 +189,8 @@
             background: rgba(126, 203, 126, 0.08)
         }
 
+        .tag.both { color: #8aa8d8; border-color: #8aa8d8; background: rgba(138,168,216,0.08) }
+
         .tag.nonveg {
             color: #e86c6c;
             border-color: #e86c6c;
