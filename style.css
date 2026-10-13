@@ -287,3 +287,270 @@ body { scrollbar-width: thin; scrollbar-color: var(--gold) var(--ink); }
 .loader-bar-track { width: 240px; height: 3px; background: var(--border); margin: 0 auto 1rem; border-radius: 3px; overflow: hidden; }
 .loader-bar-fill { width: 0%; height: 100%; background: linear-gradient(90deg, #B8892E, var(--gold), var(--gold-light)); border-radius: 3px; transition: width 0.1s linear; animation: loaderProgress 2.5s ease forwards; }
 @keyframes loaderProgress { 0% { width: 0%; } 70% { width: 85%; } 100% { width: 100%; } }
+
+
+/* ==========================================================================
+   Royal Navigation Bar (Menu to Main Site Connection)
+   ========================================================================== */
+.royal-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 8, 8, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.royal-nav .nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.85rem clamp(1.2rem, 4vw, 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.25s ease;
+}
+
+.nav-brand:hover {
+    transform: translateY(-1px);
+}
+
+.nav-brand-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 168, 83, 0.22) 0%, rgba(20, 16, 16, 0.8) 100%);
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(212, 168, 83, 0.25);
+}
+
+.nav-crown {
+    color: var(--gold);
+    font-size: 1.05rem;
+}
+
+.nav-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-brand-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--text);
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.nav-badge {
+    color: var(--crimson);
+    font-size: 0.95rem;
+    font-weight: 900;
+}
+
+.nav-brand-tag {
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-body);
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.5rem 0.95rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+    border-color: rgba(212, 168, 83, 0.35);
+    background: rgba(212, 168, 83, 0.08);
+}
+
+.nav-link-main {
+    background: rgba(212, 168, 83, 0.12);
+    border-color: rgba(212, 168, 83, 0.45);
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.nav-link-main:hover {
+    background: var(--gold);
+    color: var(--ink);
+    border-color: var(--gold);
+    box-shadow: 0 4px 18px rgba(212, 168, 83, 0.35);
+}
+
+.nav-link-main i {
+    font-size: 0.75rem;
+    transition: transform 0.25s ease;
+}
+
+.nav-link-main:hover i {
+    transform: translateX(-3px);
+}
+
+.nav-btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: linear-gradient(135deg, #A82025, var(--crimson));
+    color: #FFF;
+    text-decoration: none;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 14px rgba(193, 39, 45, 0.35);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.nav-btn-call:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(193, 39, 45, 0.55);
+    color: #FFF;
+}
+
+/* Footer enhancements */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    font-size: 0.88rem;
+}
+
+.footer-primary-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer-primary-link:hover {
+    color: var(--gold-light);
+    text-decoration: underline;
+}
+
+.footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--text);
+}
+
+.footer-sep {
+    color: var(--border);
+}
+
+.footer-copy {
+    color: #666;
+    font-size: 0.78rem;
+}
+
+@media (max-width: 860px) {
+    .nav-link-story,
+    .nav-link-gallery {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .royal-nav .nav-container {
+        padding: 0.65rem 1rem;
+    }
+
+    .nav-brand-tag {
+        display: none;
+    }
+
+    .nav-brand-title {
+        font-size: 1rem;
+    }
+
+    .nav-brand-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-crown {
+        font-size: 0.9rem;
+    }
+
+    .nav-actions {
+        gap: 0.4rem;
+    }
+
+    .nav-link {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .nav-link-loc span {
+        display: none;
+    }
+
+    .nav-btn-call {
+        padding: 0.4rem 0.85rem;
+        font-size: 0.75rem;
+    }
+
+    .nav-btn-call span {
+        display: none;
+    }
+
+    .nav-btn-call::after {
+        content: "Call";
+    }
+}
