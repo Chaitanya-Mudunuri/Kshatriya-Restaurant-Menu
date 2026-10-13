@@ -20,16 +20,22 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
     <!-- 2. Canonical URL -->
-        <!-- Favicon (Displays in Google Search Results) -->
-    <link rel="icon" type="image/jpeg" href="https://kshatriya.mudunuri.co.in/restaurant_profile.jpg">
-    <link rel="apple-touch-icon" href="https://kshatriya.mudunuri.co.in/restaurant_profile.jpg">
+        <!-- Favicon & Search Logo (Displays in Google Search Results & Browser Tabs) -->
+    <link rel="icon" type="image/x-icon" href="https://menu.kshatriya.mudunuri.co.in/favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://menu.kshatriya.mudunuri.co.in/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://menu.kshatriya.mudunuri.co.in/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://menu.kshatriya.mudunuri.co.in/apple-touch-icon.png">
+    <link rel="shortcut icon" href="https://menu.kshatriya.mudunuri.co.in/favicon.ico">
 
     <link rel="canonical" href="https://menu.kshatriya.mudunuri.co.in/">
 
     <!-- 3. Open Graph (WhatsApp, Facebook & Social Previews) -->
     <meta property="og:type" content="restaurant.menu">
     <meta property="og:url" content="https://menu.kshatriya.mudunuri.co.in/">
+    <!-- Google Search Site Name Definition -->
     <meta property="og:site_name" content="Kshatriya Restaurant 2">
+    <meta name="application-name" content="Kshatriya Restaurant 2 Menu">
+    <meta name="apple-mobile-web-app-title" content="Kshatriya 2 Menu">
     <meta property="og:title" content="Kshatriya Restaurant 2 — Official Digital Menu">
     <meta property="og:description" content="Explore our royal menu: Legendary Chitti Muthyala Biryani, Natukodi specials, and traditional Andhra delicacies at NH 16, Dharmavaram.">
     <meta property="og:image" content="https://kshatriya.mudunuri.co.in/restaurant_front.jpg">
@@ -44,7 +50,19 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Menu",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://menu.kshatriya.mudunuri.co.in/#website",
+          "name": "Kshatriya Restaurant 2",
+          "alternateName": [
+            "Kshatriya Restaurant 2 Menu",
+            "Kshatriya 2 Menu"
+          ],
+          "url": "https://menu.kshatriya.mudunuri.co.in/"
+        },
+        {
+          "@type": "Menu",
       "@id": "https://menu.kshatriya.mudunuri.co.in/#menu",
       "name": "Kshatriya Restaurant 2 Official Digital Menu",
       "url": "https://menu.kshatriya.mudunuri.co.in/",
@@ -87,8 +105,11 @@
         "@id": "https://kshatriya.mudunuri.co.in/#restaurant",
         "name": "Kshatriya Restaurant 2",
         "url": "https://kshatriya.mudunuri.co.in/",
-        "telephone": "+918790189498"
-      }
+        "telephone": "+918790189498",
+        "logo": "https://kshatriya.mudunuri.co.in/logo.jpg"
+          }
+        }
+      ]
     }
     </script>
 
@@ -117,7 +138,7 @@
         <div class="nav-container">
             <a href="https://kshatriya.mudunuri.co.in/" class="nav-brand" title="Visit Kshatriya Restaurant 2 Official Website">
                 <div class="nav-brand-logo">
-                    <i class="fas fa-crown nav-crown"></i>
+                    <img src="favicon-48x48.png" alt="Kshatriya 2 Logo" width="38" height="38" style="border-radius:50%;object-fit:cover;">
                 </div>
                 <div class="nav-brand-text">
                     <span class="nav-brand-title">KSHATRIYA <span class="nav-badge">2</span></span>
